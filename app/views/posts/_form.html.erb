@@ -12,9 +12,8 @@
   <br>
   <p>Create a new category</p>
   Category:
-  <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
-    <%= categories_fields.label :name, "Category" %>
-    <%= categories_fields.text_field :name %>
+  <%= f.fields_for :categories, @post.categories.build do |categories_attributes| %>
+    <%= categories_attributes.text_field :name %>
   <% end %>
   <%= f.submit %>
 <% end %>
